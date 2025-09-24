@@ -2,7 +2,7 @@ name: simple
 
 services:
   app:
-    image: nanda1612/simple-app
+    image: nanda1612/simple-apps
     build: ./app
     ports:
       - "5000:3000"
