@@ -1,82 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training DevOps</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training DevOps</title>
+  <style>
+    /* Reset dasar */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #0ea5a4;
+      color: white;
+      padding: 15px 20px;
+    }
+    header .header-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    header .logo {height: 50px;}
+    header h1 {font-size: 24px;}
+
+    /* Navigasi */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav ul li {margin: 0 15px;}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {text-decoration: underline;}
+
+    /* Konten Utama */
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    main section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 10px;
+      color: #0ea5a4;
+    }
+
+    /* Tabel */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background: #0ea5a4;
+      color: white;
+    }
+    table tr:nth-child(even) {background: #f9f9f9;}
+
+    /* Footer */
+    footer {
+      background: #0ea5a4;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img class="logo" src="./images/idn-logo.png" alt="idn-logo">
-        <h1>Belajar DevOps</h1>
-        <nav>
-            <a href="#beranda">Beranda</a>
-            <a href="#materi">Materi</a>
-            <a href="#jadwal">Jadwal</a>
-            <a href="#kontak">Kontak</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img class="logo" src="./images/idn-logo.png" alt="idn-logo">
+      <h1>Belajar DevOps</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#jadwal">Jadwal</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="beranda">
-            <h2>Selamat Datang</h2>
-            <p>Website ini dibuat untuk mendukung pelatihan DevOps. 
-               Di sini Anda dapat menemukan materi, jadwal, dan informasi penting lainnya.</p>
-        </section>
+  <!-- Main Content -->
+  <main>
+    <section id="beranda">
+      <h2>Selamat Datang</h2>
+      <p>Website ini dibuat untuk mendukung pelatihan DevOps. 
+         Di sini Anda dapat menemukan materi, jadwal, dan informasi penting lainnya.</p>
+    </section>
 
-        <section id="materi">
-            <h2>Materi Pelatihan</h2>
-            <ul>
-                <li>Pengenalan DevOps</li>
-                <li>Continuous Integration (CI)</li>
-                <li>Continuous Deployment (CD)</li>
-                <li>Container & Docker</li>
-                <li>Kubernetes Dasar</li>
-                <li>Monitoring & Logging</li>
-            </ul>
-        </section>
+    <section id="materi">
+      <h2>Materi Pelatihan</h2>
+      <ul>
+        <li>Pengenalan DevOps</li>
+        <li>Continuous Integration (CI)</li>
+        <li>Continuous Deployment (CD)</li>
+        <li>Container & Docker</li>
+        <li>Kubernetes Dasar</li>
+        <li>Monitoring & Logging</li>
+      </ul>
+    </section>
 
-        <section id="jadwal">
-            <h2>Jadwal</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Hari</th>
-                        <th>Materi</th>
-                        <th>Waktu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Senin</td>
-                        <td>Pengenalan DevOps</td>
-                        <td>09.00 - 11.00</td>
-                    </tr>
-                    <tr>
-                        <td>Selasa</td>
-                        <td>Continuous Integration</td>
-                        <td>09.00 - 11.00</td>
-                    </tr>
-                    <tr>
-                        <td>Rabu</td>
-                        <td>Docker & Container</td>
-                        <td>09.00 - 11.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <section id="jadwal">
+      <h2>Jadwal</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Materi</th>
+            <th>Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senin</td>
+            <td>Pengenalan DevOps</td>
+            <td>09.00 - 11.00</td>
+          </tr>
+          <tr>
+            <td>Selasa</td>
+            <td>Continuous Integration</td>
+            <td>09.00 - 11.00</td>
+          </tr>
+          <tr>
+            <td>Rabu</td>
+            <td>Docker & Container</td>
+            <td>09.00 - 11.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section id="kontak">
-            <h2>Kontak</h2>
-            <p>Email: training@devops.com</p>
-            <p>Telepon: 0812-3456-7890</p>
-        </section>
-    </main>
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: training@devops.com</p>
+      <p>Telepon: 0812-3456-7890</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Training DevOps - All Rights Reserved</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Training DevOps - All Rights Reserved</p>
+  </footer>
 </body>
 </html>
